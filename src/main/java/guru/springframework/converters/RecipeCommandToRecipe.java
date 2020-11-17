@@ -32,7 +32,7 @@ public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {
             return null;
         }
 
-        final Recipe recipe = new Recipe();
+        Recipe recipe = new Recipe();
         recipe.setId(source.getId());
         recipe.setCookTime(source.getCookTime());
         recipe.setPrepTime(source.getPrepTime());
@@ -44,12 +44,12 @@ public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {
         recipe.setUrl(source.getUrl());
         recipe.setNotes(notesConverter.convert(source.getNotes()));
 
-        if (source.getCategories() != null && source.getCategories().isEmpty()) {
+        if (source.getCategories() != null && !source.getCategories().isEmpty()) {
             source.getCategories()
                     .forEach(category -> recipe.getCategories().add(categoryConveter.convert(category)));
         }
 
-        if (source.getIngredients() != null && source.getIngredients().isEmpty()) {
+        if (source.getIngredients() != null && !source.getIngredients().isEmpty()) {
             source.getIngredients()
                     .forEach(ingredient -> recipe.getIngredients().add(ingredientConverter.convert(ingredient)));
         }
