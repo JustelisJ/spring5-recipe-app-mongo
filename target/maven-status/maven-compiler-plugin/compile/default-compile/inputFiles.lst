@@ -1,0 +1,14 @@
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/controller/IndexController.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/repositories/RecipeRepository.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/Category.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/service/RecipeService.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/Recipe.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/Ingredient.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/Spring5RecipeAppApplication.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/bootstrap/RecipeBootstrap.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/repositories/CategoryRepository.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/UnitOfMeasure.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/Notes.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/domain/Difficulty.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/service/RecipeServiceImpl.java
+/home/justinas/Desktop/tmp/spring5-recipe-app/src/main/java/guru/springframework/repositories/UnitOfMeasureRepository.java

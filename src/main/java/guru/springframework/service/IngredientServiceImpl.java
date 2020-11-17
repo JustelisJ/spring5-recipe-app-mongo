@@ -71,7 +71,6 @@ public class IngredientServiceImpl implements IngredientService {
                         .orElseThrow(() -> new RuntimeException("UOM not found")));
             } else {
                 Ingredient ingredient = ingredientCommandToIngredient.convert(command);
-                ingredient.setRecipe(recipe);
                 recipe.addIngredient(ingredient);
             }
 
@@ -102,7 +101,6 @@ public class IngredientServiceImpl implements IngredientService {
                     .findFirst();
             if (ingredientToRemove.isPresent()) {
                 Ingredient ingredient = ingredientToRemove.get();
-                ingredient.setRecipe(null);
                 recipe.getIngredients().remove(ingredient);
                 recipeRepository.save(recipe);
             } else {
