@@ -6,20 +6,20 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CategoryTest {
 
     Category category;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         category = new Category();
     }
 
     @Test
     public void getId() {
-        Long idValue = 4L;
+        String idValue = "4L";
         category.setId(idValue);
         assertEquals(idValue, category.getId());
     }

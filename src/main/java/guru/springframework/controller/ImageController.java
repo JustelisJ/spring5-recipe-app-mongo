@@ -29,27 +29,27 @@ public class ImageController {
     }
 
     @GetMapping("/recipe/{recipeId}/image")
-    public String showUploadForm(@PathVariable String recipeId, Model model){
-        model.addAttribute("recipe", recipeService.findCommandById(Long.valueOf(recipeId)));
+    public String showUploadForm(@PathVariable String recipeId, Model model) {
+        model.addAttribute("recipe", recipeService.findCommandById(recipeId));
 
         return "recipe/imageuploadform";
     }
 
     @PostMapping("/recipe/{recipeId}/image")
-    public String handleImagePost(@PathVariable String recipeId, @RequestParam("imagefile") MultipartFile file){
-        imageService.saveImageFile(Long.valueOf(recipeId), file);
+    public String handleImagePost(@PathVariable String recipeId, @RequestParam("imagefile") MultipartFile file) {
+        imageService.saveImageFile(recipeId, file);
 
         return "redirect:/recipe/" + recipeId + "/show";
     }
 
     @GetMapping("recipe/{id}/recipeimage")
     public void renderImageFromDB(@PathVariable String id, HttpServletResponse response) throws IOException {
-        RecipeCommand recipeCommand = recipeService.findCommandById(Long.valueOf(id));
+        RecipeCommand recipeCommand = recipeService.findCommandById(id);
 
-        if (recipeCommand.getImage() != null){
+        if (recipeCommand.getImage() != null) {
             byte[] byteArray = new byte[recipeCommand.getImage().length];
             int i = 0;
-            for (Byte wrapperByte:recipeCommand.getImage()) {
+            for (Byte wrapperByte : recipeCommand.getImage()) {
                 byteArray[i++] = wrapperByte;
             }
 
