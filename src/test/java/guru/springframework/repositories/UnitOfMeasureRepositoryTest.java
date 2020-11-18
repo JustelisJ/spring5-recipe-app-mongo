@@ -2,20 +2,18 @@ package guru.springframework.repositories;
 
 import guru.springframework.domain.UnitOfMeasure;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
 
-@Ignore
 @RunWith(SpringRunner.class)
-@DataJpaTest
+@DataMongoTest
 public class UnitOfMeasureRepositoryTest {
 
     @Autowired
@@ -34,7 +32,7 @@ public class UnitOfMeasureRepositoryTest {
     }
 
     @Test
-    public void findByUomCup() {
+    public void findByUom2() {
         Optional<UnitOfMeasure> optionalUnitOfMeasure = unitOfMeasureRepository.findByUom("Cup");
 
         assertEquals("Cup", optionalUnitOfMeasure.get().getUom());
